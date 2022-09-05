@@ -65,7 +65,7 @@ func parseField(rows []*xlsx.Row, maxCol int) ([]*Field, error) {
 	for i := 0; i < maxCol; i++ {
 		var field Field
 		name := stringy.New(nameRow.Cells[i].Value).CamelCase()
-
+		name = ToPascal(nameRow.Cells[i].Value)
 		// name := nameRow.Cells[i].Value
 		if len(name) == 0 {
 			continue

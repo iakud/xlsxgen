@@ -12,7 +12,7 @@ var outDir string
 func init() {
 	flag.StringVar(&inDir, "i", "in", "input dir")
 	flag.StringVar(&outDir, "o", "out", "output dir")
-	flag.Parse()
+	// flag.Parse()
 }
 
 func main() {
